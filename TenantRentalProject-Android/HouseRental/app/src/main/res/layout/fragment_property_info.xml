@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shared.PropertyInfoFragment">
+
+        <ScrollView android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <AdapterViewFlipper
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/propertyInfo_imageViewFlipper"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_surfaceArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/surface_area"
+                        android:enabled="false"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_bedroomsCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/bedrooms_count"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_rentalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/rental_price"
+                        android:enabled="false"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_constructionYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/construction_year"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_availabilityDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/availability_date"
+                        android:inputType="date" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/country"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/city"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_propertyStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/status"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_hasBalcony"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/has_balcony"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_hasGarden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/has_garden"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_isRented"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/is_rented"
+                        android:enabled="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect_background_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/propertyInfo_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/description"
+                        android:lines="5"
+                        android:enabled="false"
+                        android:inputType="textImeMultiLine|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_info"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/propertyInfo_editButton"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_images"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/propertyInfo_editImagesButton"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:textColor="#fff"
+                    android:backgroundTint="@color/btn_red_background_tint"
+                    android:id="@+id/propertyInfo_deleteButton"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apply"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/propertyInfo_applyButton"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/propertyInfo_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone" />
+
+</FrameLayout>

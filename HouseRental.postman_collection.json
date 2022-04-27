@@ -1,0 +1,628 @@
+{
+	"info": {
+		"_postman_id": "bb545495-cccb-4737-a562-6fffe69555e1",
+		"name": "HouseRental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Tenant user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\":\"ahmad@gmail.com\",\n    \"password\":\"P@ssw0rd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/login",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Renting Agency Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\":\"agency@mail.com\",\n    \"password\":\"P@ssw0rd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/login",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sign Up",
+			"item": [
+				{
+					"name": "Agency Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\":\"agency_test@mail.com\",\n    \"password\":\"P@ssw0rd\",\n    \"countryId\":2,\n    \"cityId\":3,\n    \"name\":\"test agency\",\n    \"phoneNumber\":\"00962777888999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/agencies",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"agencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\":\"tenant_test@mail.com\",\n    \"password\":\"P@ssw0rd\",\n    \"residenceCountryId\":2,\n    \"residenceCityId\":3,\n    \"firstName\":\"Test\",\n    \"lastName\":\"Tenant\",\n    \"nationalityId\":2,\n    \"gender\":\"Male\",\n    \"monthlySalary\":1000,\n    \"occupation\":\"Programmer\",\n    \"familySize\":3,\n    \"phoneNumber\":\"00962777888999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/tenants",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"tenants"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tenants",
+			"item": [
+				{
+					"name": "Tenatn Info By Id (Email)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/tenants/ahmad@gmail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"tenants",
+								"ahmad@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RentingAgency",
+			"item": [
+				{
+					"name": "Renting Agency Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/agencies/agency2@mail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"agencies",
+								"agency2@mail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Renting Agency Properties List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/agencies/agency@mail.com/properties",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"agencies",
+								"agency@mail.com",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Properties",
+			"item": [
+				{
+					"name": "Images",
+					"item": [
+						{
+							"name": "Get Property Images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host_address}}/properties/1/images",
+									"host": [
+										"{{host_address}}"
+									],
+									"path": [
+										"properties",
+										"1",
+										"images"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Image file",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host_address}}/images/f245d721-d226-46e7-a80e-a1680008e2a3.bmp",
+									"host": [
+										"{{host_address}}"
+									],
+									"path": [
+										"images",
+										"f245d721-d226-46e7-a80e-a1680008e2a3.bmp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Image",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host_address}}/images/2",
+									"host": [
+										"{{host_address}}"
+									],
+									"path": [
+										"images",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/properties/all",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top 5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/properties",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/properties/available",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Properties",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\":2,\n    \"minSurfaceArea\":100,\n    \"maxSurfaceArea\":2000,\n    \"minBedroomsCount\":1,\n    \"maxBedroomsCount\":5,\n    \"minRentalPrice\":1,\n    \"maxRentalPrice\":50000,\n    \"status\":\"furnished\",\n    \"hasBalcony\":false,\n    \"hasGarden\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/properties/search",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Property Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/properties/2",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Property",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agencyId\":\"agency@mail.com\",\n    \"cityId\":2,\n    \"surfaceArea\":200,\n    \"rentalPrice\":2000,\n    \"bedroomsCount\":2,\n    \"status\":\"unfurnished\",\n    \"hasBalcony\":\"yes\",\n    \"hasGarden\":\"no\",\n    \"constructionYear\":2010,\n    \"availabilityDate\":\"2022-01-01\",\n    \"description\":\"Apartment in second floor, has balcony, not furnished, with 2 bedrooms, surface area 200 square meter, and construction year is 2010\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/properties",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rental Requests",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/1",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Requests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/tenant/ahmad@gmail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"tenant",
+								"ahmad@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Tenant Request for property",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/tenant/ahmad@gmail.com/2",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"tenant",
+								"ahmad@gmail.com",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agency Requests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/agency/agency@mail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"agency",
+								"agency@mail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tenantId\":\"ahmad@gmail.com\",\n    \"propertyId\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_address}}/requests",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/2/reject",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"2",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/requests/1/approve",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"requests",
+								"1",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rental History",
+			"item": [
+				{
+					"name": "Tenant Rental History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/rentalhistory/tenant/ahmad@gmail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"rentalhistory",
+								"tenant",
+								"ahmad@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agency Rental History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_address}}/rentalhistory/agency/agency@mail.com",
+							"host": [
+								"{{host_address}}"
+							],
+							"path": [
+								"rentalhistory",
+								"agency",
+								"agency@mail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Connect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host_address}}/connect",
+					"host": [
+						"{{host_address}}"
+					],
+					"path": [
+						"connect"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host_address",
+			"value": "http://localhost:8081"
+		}
+	]
+}

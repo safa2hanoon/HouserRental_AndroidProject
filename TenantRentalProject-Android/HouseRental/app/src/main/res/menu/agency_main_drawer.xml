@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/agency_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_properties_list"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="@string/properties_list" />
+        <item
+            android:id="@+id/nav_property_add"
+            android:icon="@drawable/ic_baseline_add_circle_outline_24"
+            android:title="@string/post_property" />
+        <item
+            android:id="@+id/nav_rental_requests"
+            android:icon="@drawable/ic_baseline_assignment_24"
+            android:title="@string/rental_requests" />
+        <item
+            android:id="@+id/nav_rental_history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="@string/rental_history" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="@string/sign_out" />
+    </group>
+</menu>

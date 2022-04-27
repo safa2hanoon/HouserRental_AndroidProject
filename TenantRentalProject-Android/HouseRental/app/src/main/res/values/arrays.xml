@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_list" >
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="propertyStatusArray" >
+        <item>Select Status</item>
+        <item>Furnished</item>
+        <item>Unfurnished</item>
+    </string-array>
+    <string-array name="propertyHasGardenArray">
+        <item>Select Option</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="propertyHasBalconyArray">
+        <item>Select Option</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="is_rented_option_array" >
+        <item>Select Option</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

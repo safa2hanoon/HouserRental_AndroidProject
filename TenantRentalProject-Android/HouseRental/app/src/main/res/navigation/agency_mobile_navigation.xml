@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="edu.berziet.houserental.agency.ui.main.RentingAgencyMainFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_renting_agency_main" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="edu.berziet.houserental.agency.ui.profile.RentingAgencyProfileFragment"
+        android:label="@string/renting_agency_profile"
+        tools:layout="@layout/fragment_renting_agency_profile" />
+    <fragment
+        android:id="@+id/nav_log_out"
+        android:name="edu.berziet.houserental.auth.ui.SignOutFragment"
+        android:label="@string/sign_out"
+        tools:layout="@layout/fragment_signout" />
+    <fragment
+        android:id="@+id/nav_edit_agency_profile"
+        android:name="edu.berziet.houserental.agency.ui.profile.RentingAgencyEditProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_renting_agency_edit_profile" />
+    <fragment
+        android:id="@+id/nav_property_add"
+        android:name="edu.berziet.houserental.agency.ui.property.RentingAgencyPostPropertyFragment"
+        android:label="@string/post_a_property"
+        tools:layout="@layout/fragment_renting_agency_post_property" />
+    <fragment
+        android:id="@+id/nav_properties_list"
+        android:name="edu.berziet.houserental.agency.ui.property.RentingAgencyPropertiesListFragment"
+        android:label="@string/properties_list"
+        tools:layout="@layout/fragment_renting_agency_properties_list" />
+    <fragment
+        android:id="@+id/nav_property_info"
+        android:name="edu.berziet.houserental.shared.PropertyInfoFragment"
+        android:label="@string/property_info"
+        tools:layout="@layout/fragment_property_info" />
+    <fragment
+        android:id="@+id/nav_edit_property"
+        android:name="edu.berziet.houserental.agency.ui.property.RentingAgencyEditPropertyFragment"
+        android:label="@string/edit_property"
+        tools:layout="@layout/fragment_renting_agency_edit_property"/>
+    <fragment
+        android:id="@+id/nav_property_images"
+        android:name="edu.berziet.houserental.agency.ui.property.RentingAgencyPropertyImageFragment"
+        android:label="@string/edit_images"
+        tools:layout="@layout/fragment_renting_agency_property_image" />
+    <fragment
+        android:id="@+id/nav_property_add_image"
+        android:name="edu.berziet.houserental.agency.ui.property.RentingAgencyPropertyImageAddFragment"
+        android:label="@string/add_image"
+        tools:layout="@layout/fragment_renting_agency_property_image_add" />
+    <fragment
+        android:id="@+id/nav_request_info"
+        android:name="edu.berziet.houserental.agency.ui.requests.RentingAgencyRentalRequestInfoFragment"
+        android:label="@string/rental_requests"
+        tools:layout="@layout/fragment_renting_agency_rental_request_info" />
+    <fragment
+        android:id="@+id/nav_rental_requests"
+        android:name="edu.berziet.houserental.agency.ui.requests.RentingAgencyRentalRequestsFragment"
+        android:label="@string/rental_requests"
+        tools:layout="@layout/fragment_renting_agency_rental_requests" />
+    <fragment
+        android:id="@+id/nav_tenant_profile"
+        android:name="edu.berziet.houserental.agency.ui.tenant.RentingAgencyTenantProfileFragment"
+        android:label="@string/tenant"
+        tools:layout="@layout/fragment_renting_agency_tenant_profile" />
+    <fragment
+        android:id="@+id/nav_tenant_rental_history"
+        android:name="edu.berziet.houserental.agency.ui.tenant.RentingAgencyTenantRentalHistoryFragment"
+        android:label="@string/tenant_rental_history"
+        tools:layout="@layout/fragment_tenant_rental_history" />
+    <fragment
+        android:id="@+id/nav_rental_history"
+        android:name="edu.berziet.houserental.agency.ui.rentalhistory.RentingAgencyRentalHistoryFragment"
+        android:label="@string/rental_history"
+        tools:layout="@layout/fragment_agency_rental_history" />
+
+
+</navigation>
